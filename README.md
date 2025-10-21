@@ -1,6 +1,6 @@
 KipuBankV2 – OpenZeppelin Edition
 
-Resumen. Evolucioné el KipuBank original a una versión más cercana a producción: soporte multi-token (ETH + ERC-20), roles con AccessControl, valuación en USD(6) via Chainlink y cap global del banco en USD. Agregué límites por retiro por token, eventos y errores personalizados, y protecciones (ReentrancyGuard, SafeERC20, patrón checks-effects-interactions).
+Evolucioné el KipuBank original a una versión más cercana a producción: soporte multi-token (ETH + ERC-20), roles con AccessControl, valuación en USD(6) via Chainlink y cap global del banco en USD. Agregué límites por retiro por token, eventos y errores personalizados, y protecciones (ReentrancyGuard, SafeERC20, patrón checks-effects-interactions).
 
 Mejoras clave
 
