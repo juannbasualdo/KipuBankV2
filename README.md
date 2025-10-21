@@ -12,21 +12,15 @@ Oracle & contabilidad: _toUsd() convierte montos a USD con 6 decimales usando Ch
 
 Seguridad: ReentrancyGuard, SafeERC20, errores custom (gas-efficient) y eventos trazables (Deposit, Withdraw, TokenConfigured).
 
-Decisiones de diseño (breve)
+Decisiones de diseño:
 
 Normalizo todo a USD(6) (estilo USDC) para simplificar contabilidad multi-decimales.
 
-bankCapUsd6 inmutable → coherencia y menos superficie de error.
+bankCapUsd6 inmutable: coherencia y menos superficie de error.
 
 address(0) como ETH evita código duplicado.
 
 Prioricé claridad + seguridad antes que micro-optimizaciones.
-
-Despliegue (ejemplo con Hardhat)
-npm install
-npx hardhat compile
-# Sepolia
-npx hardhat run scripts/deploy.js --network sepolia
 
 
 Parámetros típicos del constructor:
@@ -35,14 +29,6 @@ const bankCapUsd6 = 10000000000; // Cap global = 10 000 USD
 const ethPriceFeed = "0x694AA1769357215DE4FAC081bf1f309aDC325306"; // Chainlink ETH/USD Sepolia
 const ethWithdrawLimit = 50000000000000000
 
-
-Verificación en Etherscan
-
-npx hardhat verify --network sepolia \
-0x81032740b2d5f6805ccff49896b97dfdb29f3561 \
-"1000000000" \
-"0x694AA1769357215DE4FAC081bf1f309aDC325306" \
-"1000000000000000000"
 
 Uso rápido
 
